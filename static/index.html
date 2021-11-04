@@ -69,17 +69,7 @@ function drawCircle(context,entity) {
         var x = entity["x"];
         var y = entity["y"];
         //moveTo(x,y);
-        // fillStyle = entity["colour"];
-        // https://www.w3schools.com/tags/canvas_strokestyle.asp
-
-        // var gradient = createLinearGradient(0, 0, 500, 0);
-        // gradient.addColorStop("0", "blue");
-        // gradient.addColorStop("0.5", "magenta");
-        // gradient.addColorStop("1.0", "red");
-
-        // strokeStyle = gradient;
-        // arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);  
-        // stroke();     
+        // https://www.w3schools.com/tags/canvas_drawimage.asp
         var img = document.createElement("img");
         img.src = '/static/img/pikachu.png';
         drawImage(img,x,y,50,50);
@@ -279,7 +269,7 @@ mouse.mousedraggers.push(function(x,y,clicked,e) {
 
 function update() {
     //XXX: TODO Get the world from the webservice using a XMLHTTPRequest
-    // reference: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response
     var url = "/world";
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
