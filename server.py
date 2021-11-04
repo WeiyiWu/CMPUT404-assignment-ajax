@@ -80,6 +80,14 @@ def hello():
 def update(entity):
     data = flask_post_json()
     keys = data.keys()
+    # if request.method == 'POST':
+    #     for key in keys:
+    #         myWorld.update(entity, key, data[key])
+    #     return None
+
+    # elif request.method == 'PUT':
+    #     myWorld.set(entity, data)
+    #     return myWorld.get(entity)
     for key in keys:
         myWorld.update(entity, key, data[key])
 

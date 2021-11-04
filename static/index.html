@@ -72,14 +72,17 @@ function drawCircle(context,entity) {
         // fillStyle = entity["colour"];
         // https://www.w3schools.com/tags/canvas_strokestyle.asp
 
-        var gradient = createLinearGradient(0, 0, 500, 0);
-        gradient.addColorStop("0", "blue");
-        gradient.addColorStop("0.5", "magenta");
-        gradient.addColorStop("1.0", "red");
+        // var gradient = createLinearGradient(0, 0, 500, 0);
+        // gradient.addColorStop("0", "blue");
+        // gradient.addColorStop("0.5", "magenta");
+        // gradient.addColorStop("1.0", "red");
 
-        strokeStyle = gradient;
-        arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);  
-        stroke();     
+        // strokeStyle = gradient;
+        // arc(x, y, (entity["radius"])?entity["radius"]:50, 0, 2.0 * Math.PI, false);  
+        // stroke();     
+        var img = document.createElement("img");
+        img.src = '/static/img/pikachu.png';
+        drawImage(img,x,y,50,50);
     }
 }
 
